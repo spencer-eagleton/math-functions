@@ -84,7 +84,10 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    const sum1 = sum(sumArr[0], sumArr[1])[0];
+    const sum2 = sum(sum1, sumArr[2])[0];
+    const str1 = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum2} is their sum.`;
+    return [sum2, str1];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
